@@ -32,6 +32,17 @@ const convertToGif=async()=>{
   setGif(url);
 }
 
+const downloadGif=(gif)=>{
+  if(gif){
+  const fileName=gif.split('/').pop()
+  const aTag=document.createElement('a')
+  aTag.href=gif;
+  aTag.setAttribute('download',fileName)
+  document.body.appendChild(aTag)
+  aTag.click();
+  aTag.remove();
+  }
+}
 
 
   return ready ?(
@@ -47,9 +58,16 @@ const convertToGif=async()=>{
           <br />
 
       {gif && <img src={gif} width={250}/>}
-    </div>
+      <br />
+      
+      {gif && <button onClick={()=>downloadGif(gif)}>Download</button>}
+
+      </div>
   ):
   (<p>Loading...</p>)
 }
 
 export default App;
+
+//{gif && <button onClick={()=>downloadGif(gif)}>Download</button>}
+//in the above line dont forget to pass the(gif argument)
