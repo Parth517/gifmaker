@@ -7,6 +7,10 @@
     "lint": "prettier --check \"src/**/*.{js,jsx}\""
   },
   "dependencies": {
+    "@ffmpeg/core": "^0.9.0",
+    "@ffmpeg/ffmpeg": "^0.9.8",
+    "@snowpack/plugin-webpack": "^3.0.0",
+    "coi-serviceworker": "^0.1.7",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
