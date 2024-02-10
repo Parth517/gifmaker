@@ -1,6 +1,8 @@
 # New Project
 
-> ✨ Bootstrapped with Create Snowpack App (CSA).
+Ensure that you run chrome in shared Array Buffer.
+
+start chrome --enable-features=SharedArrayBuffe
 
 ## Available Scripts
 
